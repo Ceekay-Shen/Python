@@ -9,6 +9,7 @@ def creatDataSet():
 
 def classify0(inX, dataSet, labels, k):
     dataSetSize = dataSet.shape[0]
+    ###生成矩阵和计算矩阵
     diffMat = tile(inX,(dataSetSize,1)) - dataSet
     sqDiffMat = diffMat ** 2
     sqDistance = sqDiffMat.sum(axis = 1)
@@ -25,7 +26,6 @@ def classify0(inX, dataSet, labels, k):
 if __name__ == "__main__":
     group,labels = creatDataSet()
     a = classify0([1,2],group,labels,3)
-
     print(a)
 
     

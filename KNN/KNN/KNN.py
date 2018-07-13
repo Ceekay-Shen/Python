@@ -34,6 +34,4 @@ def classify0(inX,dataSet,labels,k):
 if __name__ == "__main__":
 	group,labels = createDataSet()
 	print(classify0([0,0], group, labels,3))
-	print("main")
-
     
